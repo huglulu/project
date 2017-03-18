@@ -1,0 +1,97 @@
+<script>
+	var EventCenter = (function(){
+		var events ={};
+
+		function on(evt,handler){
+			events[evt] = events[evt] || [];
+			events[evt].push({
+				handler:handler
+			});
+		}
+
+		function fire(evt,arg){
+			if (!events[evt]) {
+				return;
+			}
+			for(var i=0; i<events[evt].length; i++){
+				events[evt][i].handler(args);
+			}
+		}
+
+		return {
+			on:on,
+			fire:fire
+		}
+	})();
+
+// { xxx: [ {handler:fn1},{handler:fn2},...] }
+
+//texiao
+	EventCenter.on('my_event',function(data){
+		console.log('my_event received..')
+	});
+//lunbo
+	EventCenter.fire('my_event');
+
+
+//第二种
+
+var EventCenter = (function(){
+		var events ={};
+
+		function on(evt,handler){
+			events[evt] = events[evt] || [];
+			events[evt].push(handler);
+		}
+
+		// function fire(evt,arg){
+		// 	if (!events[evt]) {
+		// 		return;
+		// 	}
+		// 	for(var i=0; i<events[evt].length; i++){
+		// 		events[evt][i](args);
+		// 	}
+		// }
+		//或者
+		function fire(evt){
+			if (!events[evt]) {
+				return;
+			}
+			for(var i=0; i<events[evt].length; i++){
+				events[evt][i]([].slice.call(arguments,1));
+			}
+		}
+		//解绑该功能  //delete xxx ：删除某个对象的xxx属性
+		// function unbind(){
+		// 	delete events[evt];
+		// }
+
+		return {
+			on:on,
+			fire:fire
+			unbind:unbind
+		}
+	})();
+
+
+// { xxx: [ fn1,fn2...] }
+
+//texiao
+	EventCenter.on('my_event',function(data,data2){
+		console.log('my_event:',data);
+	});
+	EventCenter.on('your_event',function(data){
+		console.log('your_event:',data);
+	});
+// //lunbo
+// 	EventCenter.fire('my_event');
+	EventCenter.fire('my_event','hello');
+	EventCenter.fire('my_event','hello1','hello2');
+	EventCenter.fire('your_event',{name:'hunger'});
+	EventCenter.unbind('my_event'); //删除my_event事件
+
+
+
+
+
+</script>

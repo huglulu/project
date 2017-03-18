@@ -1,0 +1,28 @@
+{
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "clone": "^2.1.0",
+    "cloneable-readable": "^1.0.0",
+    "end-of-stream": "^1.1.0",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-jshint": "^2.0.4",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-requirejs": "^1.0.0-rc1",
+    "gulp-uglify": "^2.0.1",
+    "gulp-util": "^3.0.8",
+    "is-stream": "^1.1.0",
+    "jshint": "^2.9.4",
+    "once": "^1.4.0",
+    "orchestrator": "^0.3.8",
+    "sequencify": "^0.0.7",
+    "stream-consume": "^0.1.0",
+    "through2": "^2.0.3",
+    "vinyl": "^2.0.1",
+    "wrappy": "^1.0.2"
+  }
+}
