@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<style>
+		.icon--BlueBlack{
+		  fill:blue;
+		}
+
+		.icon--BlueGreen{
+		  fill:blue;
+		  color:green;
+		}
+	</style>
+</head>
+<body>
+
+<svg style="display:none;">
+  <symbol id="test">
+      <rect x="10" y="10" width="100" height="100" /> 
+      <rect x="100" y="10" width="100" height="100" fill="currentColor" /> 
+  </symbol>
+</svg>
+
+<svg class="icon icon--BlueBlack"><use xlink:href="#test" /></svg>
+<svg class="icon icon--BlueGreen"><use xlink:href="#test" /></svg>	
+    
+</body>
+</html>

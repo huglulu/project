@@ -1,0 +1,14 @@
+<meta charset="utf-8">
+<script>
+	function createPerson(opts){
+		var person ={
+			name:opts.name || 'hunger'
+		};
+		person.sayname=function(){
+			console.log(this.name);
+		}
+		return person;
+	}
+	var p1 =  createPerson({name:'hunger'});
+	var p2 =  createPerson({name:'若愚'});
+</script>

@@ -1,0 +1,49 @@
+<script>
+    //方法1：
+    String.prototype.getMostOften = function(){
+        this.arr = [];
+        for(var i=0 ; i<this.length ; i++){
+            this.index = -1;
+            this.j = 0;
+            do{
+                this.index = this.indexOf(this[i] , this.index+1);
+                if (this.index != 1) {
+                    this.j++
+                }
+            } while( this.index != -1);
+            this.arr[this.j] = this[i];
+        }
+        return this.arr[this.arr.length-1];
+    }  
+    var str = 'ahbbccdeddddfg';
+    var ch = str.getMostOften();
+    console.log(ch); //d ，d出现5次
+    ///this.arr[this.j] j代表在arr中出现的次数，如g 1次 this.arr[1] = g;出现相同次数的字符时后面的覆盖前面的(g覆盖f)，最后一项为最大次数与出现最大次数的字符。
+
+    //方法2：   
+    String.prototype.getMostOften = function(){
+        this.obj = {};
+        for(var i =0 ; i<this.length ; i++){
+            char = this.char = this.charAt(i);
+            obj = this.obj;
+            if (obj[char]) {
+                obj[char]++;
+            }else{
+                obj[char] = 1;
+            }
+        }
+        max = this.max = 0;
+        maxChar = this.maxChar = null;
+        key = this.key;
+        for(key in obj){
+            if (max < obj[key]) {
+                max = obj[key];
+                maxChar  = key;
+            }
+        }
+        return maxChar;
+    }
+    var str = 'ahbbccdeddddfg';
+    var ch = str.getMostOften();
+    console.log(ch); //d     
+</script>

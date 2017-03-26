@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+</head>
+<body>
+   <script>
+	// function SuperType(){
+	// 	this.colors = ['red','blue','green'];
+	// }	
+	// function SubType(){
+	// }
+	// SubType.prototype =  new SuperType();//实例对象的属性添加到原型对象上了
+	// var ins1 = new SubType();
+	// ins1.colors.push('black');
+	// console.log(ins1.colors);
+
+	// var ins2 = new SubType();
+	// console.log(ins2.colors);//
+
+
+	//原型链 
+	//构造函数
+	//原型链 构造函数组合
+	// function SuperType(name){
+	// 	this.name = name;
+	// 	this.colors = ['red','blue','green'];
+	// }
+	// SuperType.prototype.sayName = function(){
+	// 	console.log(this.name);
+	// }
+	// function SubType(name,age){
+	// 	SuperType.call(this,name);
+	// 	this.age = age;
+	// }
+	// SubType.prototype = new SuperType();
+	// SubType.prototype.sayAge = function(){
+	// 	console.log(this.age);
+	// }
+	// var ins1  = new SubType('hunger',29);
+	// ins1.colors.push('black');
+	// console.log(ins1.colors);
+	// ins1.sayName();
+	// ins1.sayAge();
+
+	// var ins2 = new SubType('valley',18);
+	// console.log(ins2.colors);//通过构造函数call的方式继承分别属性，
+	// ins2.sayName();//通过原型对象继承的方式获取方法。
+	// ins2.sayAge();
+
+	//原型式继承	执行对给定对象的浅复制，而复制得到的副本还可以进一步改造
+	// function Object(o){
+	// 	function F(){}
+	// 	F.prototype = o;
+	// 	return new F()
+	// }
+
+	//寄生式继承
+	//克隆了一个传入的原始对象，在这个对象上可以添加方法，返回这个对象。
+	// function CreaterAnother(original){
+	// 	var clone = Object(original);
+	// 	clone.sayHi =function(){
+	// 		console.log('hi');
+	// 	}
+	// 	return clone;
+	// }
+
+
+	//寄生组合继承
+	//与组合继承比较：
+	//1.只会调用一次SuperType函数（高效）。
+	//2.并且避免在SubType上创建不必要多余属性。
+	//3.原型链还能保存不变。
+	// function SuperType(name){
+	// 	this.name = name;
+	// 	this.colors = ['red','blue','green'];
+	// }
+	// SuperType.prototype.sayName = function(){
+	// 	console.log(this.name);
+	// }
+	// function SubType(name,age){
+	// 	SuperType.call(this,name);
+	// 	this.age = age;
+	// }
+	// inheritPrototype(SubType,SuperType);
+	// SubType.prototype.sayAge = function(){
+	// 	console.log(this.age);
+	// }
+	// function inheritPrototype(SubType,SuperType){
+	// 	var prototype = Object(SuperType.prototype);
+	// 	prototype.constructor = SubType;
+	// 	SubType.prototype = prototype;
+	// }
+	// 
+	//  //  // inheritPrototype函数意义相当于  SubType.prototype = new SuperType();加上
+	//  SubType.prototype.consrtuctor = SubType;（以前constructor是指向SuperType的，现在指回来了）
+	// 
+	// var ins1  = new SubType('hunger',29);
+	// ins1.colors.push('black');
+	// console.log(ins1.colors);
+	// ins1.sayName();
+	// ins1.sayAge();
+
+	// var ins2 = new SubType('valley',18);
+	// console.log(ins2.colors);//通过构造函数call的方式继承分别属性，
+	// ins2.sayName();//通过原型对象继承的方式获取方法。
+	// ins2.sayAge();
+
+</script> 
+</body>
+</html>
+

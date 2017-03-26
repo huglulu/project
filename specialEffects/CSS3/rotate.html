@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>expamle</title>
+  <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.js"></script>
+  <style>
+      *{
+        box-sizing: border-box;
+      }
+      div#test{
+        width: 100%;
+        height: 500px;
+        background: white;
+        padding: 100px 0; 
+        margin: 100px auto;
+        border: 1px solid;   
+        perspective: 1000px;
+      }
+
+      #banner{
+        height: 300px;
+        width: 600px;
+        margin: 0 auto;
+        background:  #37D7B2;
+        transition: transform 0.1s;
+        box-shadow: 0 0 15px rgba(0,0,0,0.25);
+        text-align: center;
+        line-height: 300px;
+        font-size: 50px;
+        color: #fff;
+      }
+
+      body{
+        background: white;
+        padding: 20px;
+      }
+  </style>
+</head>
+<body>
+
+  <div id="test">
+    <div id="banner" >banner</div>
+  </div>
+  <script>
+      $('#test').on('mousemove', function(e){
+       console.log(1);
+        var offset = $('#test').offset();
+        
+        var x = e.pageX - offset.left;
+        var y = e.pageY - offset.top;
+        
+        
+        var centerX = $('#test').outerWidth() /2;
+        var centerY = $('#test').outerHeight() /2;
+        
+        var deltaX = x - centerX ;
+        var deltaY = y - centerY ;
+        
+        var percentX = deltaX / centerX ;//获取x方向上的百分比
+        var percentY = deltaY / centerY ;//获取y方向上的百分比
+        
+        var deg = 10 ;
+    //设置x、y方向上同时偏移
+    $('#banner').css({
+      transform: 'rotateX('+deg*-percentY + 'deg)'+'rotateY('+deg*percentX+'deg)'
+    });
+  })
+  </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" >
+    <title>jquery遍历</title>
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.js"></script>
+</head>
+<body>
+
+
+<script type="text/javascript">
+
+        //遍历一个对象
+
+        function putObj(obj){
+          if (isJSON(obj)){
+            for(var k in obj){
+              if(isJSON(obj[k])){
+                console.log(k);
+                putObj(obj[k]);
+              }
+              else{
+                console.log(k + ':' +obj[k]);
+              }
+            }    
+          }
+           else{
+            console.log(obj);
+          }
+        }
+
+        function isJSON( obj ){
+          return !!(typeof obj === 'object' && obj + '' ==='[object Object]');
+        }
+
+        putObj({a:1,b:2,c:{a:1,c:3}});
+
+
+
+
+</script>
+
+</body>
+</html>

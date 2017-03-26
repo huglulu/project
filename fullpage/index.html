@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>滚动全屏页面</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.js"></script>
+	<style>
+		html, body {
+			  width: 100%;
+			  height: 100%;
+			}
+		*{margin: 0; padding:0;}
+		*{box-sizing: border-box;}
+		header{
+			width: 380px;
+			height: 140px;
+		  	font-weight: bold;			
+			color: #fff;
+		}
+		header a{
+			font-size: 36px;
+			text-decoration: none;
+			color: #fff;
+			font-weight: bold;
+		  	padding: 0;
+		  	margin: 0;
+			font-family: Arial, Helvetica, sans-serif;		
+		}
+		body{
+		  overflow: hidden;
+		}
+		.hover{
+			color: red;
+			font-size: 37px;
+		}
+		section{
+		  display: flex;
+		  flex-direction: row;
+		  justify-content: center;
+		  align-items: center;
+		  width: 100%;
+		  height: 100%;
+		  background: linear-gradient(
+		    to bottom right,  
+		    #2C3E50, #FD746C, 
+		    #FF8235, #ffff1c, 
+		    #92FE9D, #00C9FF, 
+		    #a044ff, #e73827);
+		  background-repeat: no-repeat;
+		  background-size: 1000% 1000%;
+		  animation: gradient 240s ease infinite;			
+		}
+		@keyframes gradient { 
+		  0%{background-position:0% 0%}
+		  50%{background-position:100% 100%}
+		  100%{background-position:0% 0%}
+		}
+	</style>
+</head>
+<body>
+	   <main>
+		  <section>
+			  	<header><a href="http://hugliu.com/project/specialEffects/CSS3/cookie.html" target="_blank">第一页:css饼状图</a></header>	  	
+		  </section>
+		  <section>
+		  	<header><a href="http://hugliu.com/project/specialEffects/CSS3/3d.html" target="_blank">第二页:css3d轮播</a></header>	  		  	
+		  </section>
+		  <section>
+		  	<header><a href="http://hugliu.com/project/specialEffects/CSS3/rotate.html" target="_blank">第三页:css3d旋转</a></header>	  		  	
+		  </section>
+		  <section>
+		  	<header><a href="http://hugliu.com/project/specialEffects/CSS3/gradient.html" target="_blank">第四页:css3过渡效果</a></header>	  		  	
+		  </section>
+		</main>
+    <script>
+    	
+		resizeSectionsAlways();
+		var currentPage = 1;
+		var isScrolling = false;
+
+		$(window).on('wheel', function(e){
+		  if(isScrolling){
+		    e.preventDefault();
+		    return;
+		  }
+   		 var dir = e.originalEvent.deltaY > 0 ? 'down': 'up'
+		//e.originalEvent获取原生的js对象
+		  if(currentPage === 4 && dir === 'down'){
+		    return;
+		  }
+		  if(currentPage === 1 && dir === 'up'){
+		    return;
+		  }
+ 
+	    var height = $(window).height();
+	    isScrolling = true;
+
+  		var height2 = height * (dir === 'down' ? currentPage : (currentPage-2));
+	    $('body').stop().animate({
+		    scrollTop: height2
+		  },function(){
+		    currentPage = (dir === 'down' ? currentPage + 1: currentPage - 1);
+		    isScrolling = false;
+		     console.log(currentPage);
+		  })
+		})
+
+		/*工具函数*/
+		function resizeSections(){
+		  var height = $(window).height();
+		  $('section').each(function(index,el){
+		    var $el = $(el);
+		    $el.css('height',height);
+		  })
+		}
+
+		function resizeSectionsAlways(){
+		  resizeSections();
+		  $(window).on('resize',()=>{
+		    resizeSections();
+		  })
+		}
+
+		$('header a').on('mouseover',function(){
+			$(this).addClass('hover');
+		}).on('mouseleave',function(){
+			$(this).removeClass('hover');
+		})
+
+    </script>
+</body>
+</html>
