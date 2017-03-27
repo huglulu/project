@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>jQuery.extend demo</title>
+  <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.js"></script>
+    <style type="text/css">
+        footer {
+            height: 50px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+     <header>这是标题</header>
+    <div id="content">
+        <p>内容</p>
+        <p>内容</p>
+        <p>内容</p>
+    </div>
+    <footer>这是footer</footer>
+
+
+<script type="text/javascript">  
+    setFooter();
+    function setFooter(){
+        var winH = $(window).height(),
+            docH = $("body").height();
+        winH > docH ? $('footer').css('margin-top', (winH - docH)+"px"): null;
+    
+    }
+
+</script>
+
+</body>
+</html>
