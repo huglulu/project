@@ -3,6 +3,7 @@ $.fn.datePick = function(){
 	function datePick($node){
 		var date_today = new Date();
 		this.inputtext = $node;
+		this.currentVal = '';
 		this.real_year = date_today.getFullYear();
 		this.real_month = date_today.getMonth();
 		this.real_date = date_today.getDate();
@@ -43,6 +44,21 @@ $.fn.datePick = function(){
 				var target = $(e.target);
 				target.addClass('choose').siblings().removeClass('choose');
 				_this.cur_date = parseInt(target.html());
+
+				_this.datepick_window.find('#sure').on('click', function(){
+					var show_year = parseInt(_this.cur_year);
+					var show_month = parseInt(_this.cur_month);
+					if (_this.datepick_window.find('.choose').hasClass('hid')) {
+						if (_this.cur_month == 0) {
+							show_year -= 1;
+							show_month = 11;
+						}else{
+							show_month--;
+						}
+					}
+					_this.inputtext.val(show_year + '年'+ (show_month + 1) + '月'+ _this.cur_date +'日');
+					_this.datepick_window.fadeOut();					
+				})				
 			});
 
 			_this.datepick_window.find('#date-select').on('click',function(){
@@ -91,19 +107,26 @@ $.fn.datePick = function(){
 				})
 			});
 
-			_this.datepick_window.find('#sure').on('click',function(){
-				var show_year = parseInt(_this.cur_year);
-				var show_month = parseInt(_this.cur_month);
-				if (_this.datepick_window.find('.choose').hasClass('hid')) {
-					if (_this.cur_month == 0) {
-						show_year -= 1;
-						show_month = 11;
-					}else{
-						show_month -= 1;
-					}
-				}
-				_this.inputtext.val(show_year + '年'+ (show_month + 1) + '月'+ _this.cur_date +'日');
-				_this.datepick_window.fadeOut();
+			// _this.datepick_window.find('#sure').on('click',function(){
+			// 	var show_year = parseInt(_this.cur_year);
+			// 	var show_month = parseInt(_this.cur_month);
+			// 	if (_this.datepick_window.find('.choose').hasClass('hid')) {
+			// 		if (_this.cur_month == 0) {
+			// 			show_year -= 1;
+			// 			show_month = 11;
+			// 		}else{
+			// 			show_month--;
+			// 		}
+			// 	}
+			// 	_this.inputtext.val(show_year + '年'+ (show_month + 1) + '月'+ _this.cur_date +'日');
+			// 	_this.datepick_window.fadeOut();
+			// })
+
+			_this.datepick_window.find('#current').on('click', function(){
+				var self = _this;
+				_this.datepick_window.find('#sure').on('click', function(){
+					self.inputtext.val(self.currentVal);
+				})
 			})
 
 			_this.datepick_window.find('.right').on('click', function(){
@@ -184,10 +207,12 @@ $.fn.datePick = function(){
 			day_con.append($(ele_day)); //span 放入 days的div
 			if (this.cur_year == this.real_year && this.cur_month == this.real_month) {
 				var day_index = this.real_date + last_day % 6 ; 
+				var cur_idx = day_con.find("span:eq("+ day_index+ ")").html();
 					day_con.find( "span:eq("+ day_index+ ")" )
 						   .addClass('choose')
 						   .siblings().removeClass('choose');
 			}
+			this.currentVal = this.cur_year + '年' + (this.cur_month + 1) + '月' + cur_idx + '日';
 		},
 		getLastDay:function(year,month){
 			var month = parseInt(month, 10);

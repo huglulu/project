@@ -146,8 +146,8 @@ $.fn.datePick = function(){
 								this.day_data[i].cho = false;
 							}
 							this.day_data[day_index].cho = true;
-						}
-
+						}					
+						this.dateinput = this.cur_year + '年' + (this.cur_month + 1) + '月' + this.day_data[day_index].mes + '日';
 					},
 					getLastDay:function(year,month){
 						var month = parseInt( month, 10 );
