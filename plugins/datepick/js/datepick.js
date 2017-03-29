@@ -164,8 +164,8 @@ $.fn.datePick = function(){
 			var last_day = lastmonth_end.getDay();//当月最后一天星期几
 			var ele_day = "";
 			if (last_day != 6) {
-				for(var i = last_day + 1; i>0; i--){
-					ele_day += '<span class="hid">' + (last_date - i + 1) + '</span>';
+				for(var i = last_day; i>=0; i--){
+					ele_day += '<span class="hid">' + (last_date - i) + '</span>';
 				} //<span class="hid">31-6+1</span>...<span class="hid">31-1+1</span>
 			}
 			for(var i =0 ; i < days; i++ ){
@@ -184,13 +184,9 @@ $.fn.datePick = function(){
 			day_con.append($(ele_day)); //span 放入 days的div
 			if (this.cur_year == this.real_year && this.cur_month == this.real_month) {
 				var day_index = this.real_date + last_day % 6 ; 
-				// if (day_index != 36) {
 					day_con.find( "span:eq("+ day_index+ ")" )
 						   .addClass('choose')
 						   .siblings().removeClass('choose');
-				// }else{
-				// 	this.month
-				// }
 			}
 		},
 		getLastDay:function(year,month){
