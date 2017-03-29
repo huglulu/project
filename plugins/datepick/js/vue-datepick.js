@@ -47,6 +47,8 @@ $.fn.datePick = function(){
 					cho: false,
 					hid: false,
 					dateinput: '',
+					currentVal: '',
+					day_index : 0,
 					curIndex: 0
 				},
 				created:function(){
@@ -141,13 +143,14 @@ $.fn.datePick = function(){
 							this.day_data = ele_day;
 						}
 						if (this.cur_year == this.real_year && this.cur_month == this.real_month) {
-							var day_index = this.real_date + last_day%6;
+							this.day_index = this.real_date + last_day%6;
 							for(var i =0; i < this.day_data.length; i++){
 								this.day_data[i].cho = false;
 							}
-							this.day_data[day_index].cho = true;
-						}					
-						this.dateinput = this.cur_year + '年' + (this.cur_month + 1) + '月' + this.day_data[day_index].mes + '日';
+							this.day_data[this.day_index].cho = true;
+							this.currentVal = this.cur_year + '年' + (this.cur_month + 1) + '月' + this.day_data[this.day_index].mes + '日';				
+						}	
+						// this.currentVal = this.cur_year + '年' + (this.cur_month + 1) + '月' + this.day_data[this.day_index].mes + '日';				
 					},
 					getLastDay:function(year,month){
 						var month = parseInt( month, 10 );
@@ -195,10 +198,13 @@ $.fn.datePick = function(){
 						this.month_set = true;
 						this.dateselect = this.cur_year + '年';
 					},
-					curClick:function(){
+					curClick:function(e){
+						var target = $(e.target);
+						var _this = this;
 						this.cur_year = this.real_year;
 						this.cur_month = this.real_month;
 						this.getDayRender();
+						_this.dateinput = _this.currentVal;
 						this.year_set = false;
 						this.month_set = false;
 						this.week_set = true;
