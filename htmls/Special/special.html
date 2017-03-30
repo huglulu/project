@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="container">
+	   <h2>特效，插件</h2>
+	   <ul class="list">
+		   <li v-for="item in lists" :class="{}">
+		  	 <a :href="item.link" :target="bak" @mouseenter.prevent= "addbg" @mouseleave.prevent= 'remvbg'>
+		   		<h3>{{item.title}}</h3>
+		   		<p>{{item.content}}</p>
+		   	</a>
+		   </li>    	     	     	    	   	  	  		
+	   </ul>
+	 </div>
+ <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.js"></script>	 
+ <script src="js/vue.js"></script>
+ <script>
+ 	new Vue({
+ 		el: '.container',
+ 		data:{
+ 			bak: '_blank',
+ 			lists: [
+ 				{ title:'A', content:'fullpage',link:'http:hugliu.com/project/fullpage/fullpage.html' },
+ 				{ title:'B', content:'H5' ,link:'http:hugliu.com/project/specialEffects/CSS3/css_drag.html'},
+ 				{ title:'C', content:'饼状图，音符' ,link:'http:hugliu.com/project/specialEffects/CSS3/cookie.html' },
+ 				{ title:'D', content:'3D旋转' ,link:'http:hugliu.com/project/specialEffects/CSS3/rotate.html' },
+ 				{ title:'E', content:'模态框' ,link:'http:hugliu.com/project/specialEffects/Modal_box/modelbox.html' },
+ 				{ title:'F', content:'css3过渡' ,link:'http:hugliu.com/project/specialEffects/CSS3/gradient.html' },
+ 				{ title:'G', content:'Tab切换' ,link:'http:hugliu.com/project/jquery-DOM/demo2/navToggle.html' },
+ 				{ title:'H', content:'stickUP' ,link:'http:hugliu.com/project/plugs/stickUp/stickup_2.html' },
+ 				{ title:'I', content:'瀑布流' ,link:'http:hugliu.com/project/plugs/waterFall/waterfall_2.html' }
+ 			]
+ 		},
+ 		methods:{
+ 			addbg:function(event){
+ 				var target = $(event.target);
+ 				target.addClass('bgColor');
+ 			},
+ 			remvbg:function(event){
+ 				var target = $(event.target);
+ 				target.removeClass('bgColor');
+ 			}
+ 		}
+ 	})
+ </script>
+</body>
+</html>
