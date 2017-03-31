@@ -31,7 +31,7 @@
      
      .aside {
          width: 250px;
-         background: #272827;
+         background: #0d100d;
          position: fixed;
          left: 0;
          top: 0;
@@ -265,21 +265,21 @@
      }
      
      .resume {
-         color: #fff;
+         color: #000;
          background: #f5f6f5;
          padding-left: 30px;
          background: url(../imgs/intro.jpg);
-         background-size: contain;
+         background-size: cover;
        
      }
      
      .resume h1 {
          padding: 30px;
-         color: #fff;
+         color: #000;
      }
      
      table {
-         color: #fff;
+         color: #000;
          padding-left: 30px;
      }
      
@@ -287,18 +287,15 @@
          display: none;
      }
      
-     .intro {
-        
+     .intro {     
         width: 600px;
         padding-bottom: 20px;
-
-        background:#3f3f3f;
      }
      
      .intro p {
          line-height: 30px;
          text-indent: 2em;
-         color: #fff;
+         color: #000;
      }
              .nav a:hover
             {
@@ -315,7 +312,7 @@
              display: block;
              width: 100px;
              text-align: left;
-             background: #272827;
+             background: #0d100d;
              color: #61c191;
              font-family: "宋体";
              font-weight: bold;
