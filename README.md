@@ -1,6 +1,6 @@
 # 前端学习过程中的总结
 
-* 日历插件：1.使用js和jquery实现 <a href="https://github.com/huglulu/project/tree/master/plugins/datepick" target="_blank">项目目录 &nbsp;</a> <a href="https://github.com/huglulu/project/plugins/datepick/datepick.html" target="_blank">LiveDemo</a>    <br>
+* 日历插件：1.使用js和jquery实现 <a href="https://github.com/huglulu/project/tree/master/plugins/datepick" target="_blank">项目目录 &nbsp;</a> <a href="https://huglulu.github.io/project/plugins/datepick/datepick.html" target="_blank">LiveDemo</a>    <br>
 			2.vue实现    <a href="https://github.com/huglulu/vue_item/tree/master/vue-datepick" target="_blank">项目目录 &nbsp;</a> <a href="https://huglulu.github.io/vue_item/vue-datepick/" target="_blank">LiveDemo</a>   
 
 * react打造的电影墙页面      <a href="#" target="_blank">项目介绍 &nbsp;</a>  <a href="http://win5do.cc/photowall" target="_blank">LiveDemo</a>  
