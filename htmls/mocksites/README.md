@@ -1,5 +1,5 @@
 ## gulp project
-this imitation website using gulp and require.js to compress packaged html, css, js files.
+this imitation website used gulp and require.js to compress packaged html, css, js files.
 
 ## Install
 ```bash
