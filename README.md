@@ -9,7 +9,7 @@
 
 * nodejs网络小爬虫及npm命令行工具  <a href="https://github.com/huglulu/node_learn" target="_blank">项目目录</a>
 
-* vue实现的todoList和resume <a href="https://github.com/huglulu/vue_item" target="_blank">项目目录 &nbsp;</a> <br> 
+* vue实现的todoList和resumer <a href="https://github.com/huglulu/vue_item" target="_blank">项目目录 &nbsp;</a> <br> 
 预览：[1.todoList](https://huglulu.github.io/vue_item/todoList/) &nbsp;&nbsp; [2.resumer](https://huglulu.github.io/vue_item/resumer/dist/#/)
 
 * 音乐播放器    <a href="https://github.com/huglulu/project/tree/master/plugins/my-Music" target="_blank">项目目录 &nbsp;</a> <a href="http://hugliu.com/my-Music/index.html#" target="_blank">LiveDemo</a> 
