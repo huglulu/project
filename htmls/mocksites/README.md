@@ -8,5 +8,5 @@ npm install
 
 ## Usage
 ```bash
-gulp buld
+gulp build
 ```
