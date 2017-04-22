@@ -22,6 +22,10 @@
 <a href="https://huglulu.github.io/project/specialEffects/CSS3/demo/css3%E7%85%A7%E7%89%87%E5%A2%99/picture.html" target="_blank">LiveDemo2</a> 
 <a href="https://huglulu.github.io/project/specialEffects/CSS3/demo/%E5%9B%BE%E6%96%87%E8%BD%AC%E6%8D%A2/imageDemo.html" target="_blank">LiveDemo3</a> 
 <a href="https://huglulu.github.io/project/specialEffects/CSS3/cookie.html" target="_blank">LiveDemo4</a> 
+<a href="https://huglulu.github.io/project/specialEffects/CSS3/cookie.html" target="_blank">LiveDemo4</a> 
+<a href="https://huglulu.github.io/project/specialEffects/CSS3/rotate.html" target="_blank">LiveDemo5</a> 
+<a href="https://huglulu.github.io/project/specialEffects/CSS3/CSS3/css_drag.html" target="_blank">LiveDemo6</a> 
+<a href="https://huglulu.github.io/project/specialEffects/fullpage/fullpage.html" target="_blank">LiveDemo7</a> 
 
 
 
