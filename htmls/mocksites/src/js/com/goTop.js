@@ -9,7 +9,7 @@ define(['jquery'],function($){
 		init:function(){
 			var $el = $('#'+this.id);
 			if ($el.length===0) {
-				this.$el = $('<div id="'+this.id+'">回到顶部</div>');
+				this.$el = $('<div id="'+this.id+'"><i class="iconfont icon-toTop"></i></div>');
 				$('body').append(this.$el);
 			}else{
 				this.$el = $el;

@@ -28,14 +28,14 @@
   .carousel .arrow{
     position: absolute;
     top: 50%;
-    margin-top: -15px;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
+    margin-top: -24px;
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
     text-align: center;
     background: #4E443C;
     color: #fff;
-    border-radius: 30px;
+    border-radius: 48px;
     box-shadow: 0 0 2px #999;
     opacity: 0.8
   }
@@ -55,13 +55,20 @@
     transform: translate(-50%);
   }
   ul.bullet li{
-    width: 24px;
-    height: 4px;
+    width: 34px;
+    height: 10px;
     border-radius: 2px;
     background: #fff;
     display: inline-block;
     cursor: pointer;
+    margin-left: 2px;
   }
   ul.bullet li.active{
     background: #666;
+  }
+  .icon-weibiaoti6-copy,
+  .icon-right{
+    font-size: 30px;
+    margin: 0 auto;
+    line-height: 48px;
   }
