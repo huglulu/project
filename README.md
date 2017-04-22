@@ -1,6 +1,6 @@
 # 前端学习过程中的总结
 
-* 日历插件：1.使用js和jquery实现 <a href="https://github.com/huglulu/project/tree/master/plugins/datepick" target="_blank">项目目录 &nbsp;</a> <a href="#" target="_blank">LiveDemo</a>    <br>
+* 日历插件：1.使用js和jquery实现 <a href="https://github.com/huglulu/project/tree/master/plugins/datepick" target="_blank">项目目录 &nbsp;</a> <a href="https://github.com/huglulu/project/plugins/datepick/datepick.html" target="_blank">LiveDemo</a>    <br>
 			2.vue实现    <a href="https://github.com/huglulu/vue_item/tree/master/vue-datepick" target="_blank">项目目录 &nbsp;</a> <a href="https://huglulu.github.io/vue_item/vue-datepick/" target="_blank">LiveDemo</a>   
 
 * react打造的电影墙页面      <a href="#" target="_blank">项目介绍 &nbsp;</a>  <a href="http://win5do.cc/photowall" target="_blank">LiveDemo</a>  
@@ -23,7 +23,7 @@
 <a href="https://huglulu.github.io/project/specialEffects/CSS3/demo/%E5%9B%BE%E6%96%87%E8%BD%AC%E6%8D%A2/imageDemo.html" target="_blank">demo_3 &nbsp;</a> 
 <a href="https://huglulu.github.io/project/specialEffects/CSS3/cookie.html" target="_blank">demo_4 &nbsp;</a> 
 <a href="https://huglulu.github.io/project/specialEffects/CSS3/rotate.html" target="_blank">demo_5 &nbsp;</a> 
-<a href="https://huglulu.github.io/project/specialEffects/CSS3/CSS3/css_drag.html" target="_blank">demo_6 &nbsp;</a> 
+<a href="https://huglulu.github.io/project/specialEffects/CSS3/css_drag.html" target="_blank">demo_6 &nbsp;</a> 
 <a href="https://huglulu.github.io/project/specialEffects/fullpage/fullpage.html" target="_blank">demo_7 &nbsp;</a> 
 
 
