@@ -17,7 +17,7 @@
             window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", function () {
                 let sw = document.documentElement.clientWidth;
                 var angle = window.screen.orientation.angle || window.orientation;
-                if (sw < 769 && (angle === 90 || angle === -90)) {
+                if (sw < 769 && (angle === 90 || angle === -90)) {   //html5禁用横屏 
                     alert("竖屏浏览体验更佳，亦可使用PC");
                 }
             });

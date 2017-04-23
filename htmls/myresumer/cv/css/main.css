@@ -19,18 +19,6 @@ html,body {
     color: #333;
     font: 400 14px/1.5 Microsoft YaHei, sans-serif;
 }
-
-/*@font-face {
-    font-family:"iconfont";src:url("../fonts/iconfont.eot?t=1486564141126");src:url("../fonts/iconfont.eot?t=1486564141126#iefix") format("embedded-opentype"),url("../fonts/iconfont.woff?t=1486564141126") format("woff"),url("../fonts/iconfont.ttf?t=1486564141126") format("truetype"),url("../fonts/iconfont.svg?t=1486564141126#iconfont") format("svg");
-}
-.iconfont {
-    font-family: "iconfont" !important;
-    font-size: 16px;
-    font-style: normal;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-*/
 .iconfont:before {
     vertical-align: middle;
 }
@@ -41,73 +29,6 @@ html,body {
     height: 100%;
     vertical-align: middle;
 }
-/*
-.icon-mobile:before {
-    content: "\e6b2";
-}
-
-.icon-mianshi:before {
-    content: "\e65b";
-}
-
-.icon-zhandou:before {
-    content: "\e74f";
-}
-
-.icon-nodejs:before {
-    content: "\e989";
-}
-
-.icon-jquery-copy:before {
-    content: "\e600";
-}
-
-.icon-shouye:before {
-    content: "\e629";
-}
-
-.icon-hire:before {
-    content: "\e6fd";
-}
-
-.icon-oGDwRZJ01:before {
-    content: "\e633";
-}
-
-.icon-css:before {
-    content: "\e61f";
-}
-
-.icon-react:before {
-    content: "\e770";
-}
-
-.icon-inauguration:before {
-    content: "\e877";
-}
-
-.icon-daima:before {
-    content: "\e620";
-}
-
-.icon-qianjin:before {
-    content: "\e602";
-}
-
-.icon-github:before {
-    content: "\e601";
-}
-
-.icon-down:before {
-    content: "\e70f";
-}
-
-.icon-linkedin:before {
-    content: "\e6e2";
-}
-
-*/
-
 .wrap,.container,.column {
     width: 100%;
     height: 100%;
